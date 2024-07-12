@@ -7,16 +7,16 @@ import { FaAudioDescription } from "react-icons/fa6";
 
 const Aproach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20 items-center justify-center">
         <h1 className="heading">
             My <span className="text-orange-600"> Aproach</span>
         </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
-        <Card title="Planning & Estrategy" icon={<AceternityIcon order='Phase 1'/>}
+        <Card  title="Planning & Estrategy" icon={<AceternityIcon order='Phase 1'/>}
         description="We'll collaborate to map out your websites's goals, target audience, and key functionalities. we'll  discuss things like site structure, navigation, and content requirements "
         >
           <CanvasRevealEffect
-            animationSpeed={5.1}
+            animationSpeed={3}
             containerClassName="bg-emerald-900"
           />
         </Card>
@@ -85,10 +85,10 @@ const Card = ({
       </AnimatePresence>
 
       <div className="relative z-20 items-center justify-center">
-        <div className="text-center group-hover/canvas-card:translate-y-4 absolute top-[50%] left[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center">
+        <div className="text-center group-hover/canvas-card:translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center px-8">
           {icon}
         </div>
-        <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{color: '#e4ecff'}}>
+        <h2 className="dark:text-white opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center text-3xl" style={{color: '#e4ecff'}}>
           {title}
         </h2>
         <h2 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200 text-center" style={{color: '#e4ecff'}}>
@@ -101,10 +101,10 @@ const Card = ({
 
 const AceternityIcon = ({order}: {order: string}) => {
   return (
-    <div>
+    <div className='items-center justify-center'>
        <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 justify-center items-center ">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 font-medium text-white backdrop-blur-3xl text-2xl text-bold">
             {order}
             </span>
       </button>
